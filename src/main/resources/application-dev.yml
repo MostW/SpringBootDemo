@@ -1,7 +1,7 @@
 server:
   port: 8080
   context-path: /demo
-
-age: 22
-height: 172
-content: "age: ${age}, height: ${height}"
+student:
+  age: 22
+  height: 172
+  content: "age: ${student.age}, height: ${student.height}"
