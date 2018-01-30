@@ -35,14 +35,14 @@ public class StudentController {
 
     //通过age查询
     @GetMapping(value = "/db/age/{age}")
-    public Student studentFindByAge(@PathVariable("age") Integer searchAge){
-        return db.findOne(searchAge);
+    public List<Student> studentFindByAge(@PathVariable("age") Integer searchAge){
+        return db.findByAge(searchAge);
     }
 
     //通过height查询
     @GetMapping(value = "/db/height/{height}")
-    public Student studentFindByHeight(@PathVariable("height") Integer searchHeight){
-        return db.findOne(searchHeight);
+    public List<Student> studentFindByHeight(@PathVariable("height") Integer searchHeight){
+        return db.findByHeight(searchHeight);
     }
 
     //更新原有的数据
